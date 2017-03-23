@@ -18,6 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
+Include javascript assets:
+
+```
+//= require adminlte-assets
+```
+
+Include stylesheets assets:
+
+```
+*= require adminlte-assets
+```
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/ocbs/adminlte-assets.
