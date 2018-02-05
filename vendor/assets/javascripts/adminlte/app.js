@@ -688,7 +688,14 @@ throw new Error('AdminLTE requires jQuery')
 
   // Layout DATA-API
   // ===============
-  $(window).on('load', function () {
+
+  var event = 'load';
+
+  if(typeof Turbolinks != 'undefined') {
+    event = 'turbolinks:load';
+  }
+
+  $(window).on(event, function () {
     Plugin.call($('body'));
   });
 }(jQuery);
@@ -866,7 +873,14 @@ throw new Error('AdminLTE requires jQuery')
     e.preventDefault();
     Plugin.call($(this), 'toggle');
   });
-  $(window).on('load', function () {
+
+  var event = 'load';
+
+  if(typeof Turbolinks != 'undefined') {
+      event = 'turbolinks:load';
+  }
+
+  $(window).on(event, function () {
     Plugin.call($(Selector.button));
   });
 }(jQuery);
@@ -1120,10 +1134,15 @@ throw new Error('AdminLTE requires jQuery')
 
   // Tree Data API
   // =============
-  $(window).on('load', function () {
-    $(Selector.data).each(function () {
-      Plugin.call($(this));
-    });
-  });
+    var event = 'load';
 
+    if(typeof Turbolinks != 'undefined') {
+      event = 'turbolinks:load';
+    }
+
+    $(window).on(event, function () {
+      $(Selector.data).each(function () {
+        Plugin.call($(this));
+      });
+    });
 }(jQuery);
