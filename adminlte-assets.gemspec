@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'bootstrap-sass', '~> 3.3.7'
+  spec.add_dependency 'bootstrap-sass', '~> 3.4.1'
   spec.add_dependency 'font-awesome-rails'
   spec.add_dependency 'sass-rails', '>= 3.2'
 end
